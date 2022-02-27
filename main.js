@@ -1,6 +1,7 @@
 const map = document.querySelector('.teyvat_map')
 let zoomScale = 1, 
     isMoving = false,
+    isClicked = false,
     mapHeight = map.clientHeight,
     mapWidth = map.clientWidth
 
@@ -21,6 +22,7 @@ function setTransform() {
 
 map.addEventListener('mousemove', function(e) {
     e.preventDefault()
+    isClicked = false
     if (!isMoving) return
     
     point.x = (e.clientX) - startPoint.x
@@ -31,10 +33,12 @@ map.addEventListener('mousemove', function(e) {
 
 map.addEventListener('mouseup', function(e) {
     isMoving = false
+    console.log(isClicked ? 'click' : 'drag')
 })
 
 map.addEventListener('mousedown', function(e) {
     isMoving = true
+    isClicked = true
     startPoint = { 
         x: e.clientX - point.x, 
         y: e.clientY - point.y 
@@ -54,8 +58,4 @@ map.addEventListener('wheel', function(e) {
     point.y = e.clientY - zoomY * zoomScale
 
     setTransform()
-})
-
-map.addEventListener('click', function(e) {
-    console.log('Pos: ', e.clientX, e.clientY)
 })
