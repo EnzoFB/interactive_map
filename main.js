@@ -1,4 +1,5 @@
 const map = document.querySelector('.teyvat_map')
+
 let zoomScale = 1, 
     isMoving = false,
     isClicked = false,
@@ -6,30 +7,32 @@ let zoomScale = 1,
     mapWidth = map.clientWidth,
     cptMarker = 1
 
-let point = {x: 0, y: 0}, startPoint = {x: 0, y: 0}
+let mapCoords = {x: 0, y: 0}, 
+    mouseCoords = {x: 0, y: 0}
 
 let coordsLandmarks = []
-
-const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+
 function setTransform() {
-    point.x = clamp(point.x, -mapWidth * zoomScale + window.innerWidth, 0)
-    point.y = clamp(point.y, -mapHeight * zoomScale + window.innerHeight, 0)
+    mapCoords.x = clamp(mapCoords.x, -mapWidth * zoomScale + window.innerWidth, 0)
+    mapCoords.y = clamp(mapCoords.y, -mapHeight * zoomScale + window.innerHeight, 0)
 
-    let marker = document.getElementsByClassName('landmark')
-    console.log(marker[0])
-    // marker[0].style.transform = 'translate(' + (coordsLandmarks.x + point.x) + 'px, ' + (coordsLandmarks.y + point.y) + 'px)'
-    // marker[0].style.transform = 'translate(' + point.x + 'px, ' + point.x + 'px)'
+    let markers = document.getElementsByClassName('landmark')
+    for (let i = 0; i < markers.length; i++) {
+        markers[i].style.left = (coordsLandmarks[i].x * zoomScale + mapCoords.x )  + 'px'
+        markers[i].style.top = (coordsLandmarks[i].y * zoomScale + mapCoords.y )  + 'px'
+    }
 
-    map.style.transform = 'translate(' + point.y + 'px, ' + point.x + 'px) scale(' + zoomScale + ')'
+    map.style.transform = 'translate(' + mapCoords.x + 'px, ' + mapCoords.y + 'px) scale(' + zoomScale + ')'
 }
 
 function createLandmark() {
-    let coordsLandmark = {x: startPoint.x, y: startPoint.y }
+    let coordsLandmark = {x: mouseCoords.x / zoomScale, y: mouseCoords.y / zoomScale }
     coordsLandmarks.push(coordsLandmark)
 
     let landmark = document.createElement('div')
@@ -38,22 +41,23 @@ function createLandmark() {
 
     landmark.appendChild(text)
     landmark.className = 'landmark'
-    landmark.style = 'left :' + (startPoint.x - 25) + 'px; top: ' + (startPoint.y - 25) + 'px'
+    landmark.style = 'left :' + (mouseCoords.x + mapCoords.x) + 'px; top: ' + (mouseCoords.y + mapCoords.y) + 'px'
     
     document.body.appendChild(landmark)
  
-    // console.log('Landmark created at: ', startPoint.x, startPoint.y)
-    // console.log('Map at: ', point.x, point.y)
-    console.table(coordsLandmarks)
+    console.log('Mouse at: ', mouseCoords.x, mouseCoords.y)
+    console.log('Map at: ', mapCoords.x, mapCoords.y)
 }
 
 map.addEventListener('mousemove', function(e) {
     e.preventDefault()
     isClicked = false
     if (!isMoving) return
+
+    map.style.cursor = 'grab'
     
-    point.x = (e.clientX) - startPoint.x
-    point.y = (e.clientY) - startPoint.y
+    mapCoords.x = (e.clientX) - mouseCoords.x
+    mapCoords.y = (e.clientY) - mouseCoords.y
 
     setTransform()
 })
@@ -61,6 +65,7 @@ map.addEventListener('mousemove', function(e) {
 map.addEventListener('mouseup', function(e) {
     isMoving = false
     // console.log(isClicked ? 'click' : 'drag')
+    map.style.cursor = 'pointer'
 
     if (isClicked) {
         createLandmark()
@@ -70,23 +75,23 @@ map.addEventListener('mouseup', function(e) {
 map.addEventListener('mousedown', function(e) {
     isMoving = true
     isClicked = true
-    startPoint = { 
-        x: e.clientX - point.x, 
-        y: e.clientY - point.y 
+    mouseCoords = { 
+        x: e.clientX - mapCoords.x, 
+        y: e.clientY - mapCoords.y 
     }
 })
 
 map.addEventListener('wheel', function(e) {
     e.preventDefault()
-    let zoomX = (e.clientX - point.x) / zoomScale,
-        zoomY = (e.clientY - point.y) / zoomScale,
+    let zoomX = (e.clientX - mapCoords.x) / zoomScale,
+        zoomY = (e.clientY - mapCoords.y) / zoomScale,
         delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
     
     (delta > 0) ? (zoomScale *= 1.2) : (zoomScale /= 1.2)
     zoomScale = clamp(zoomScale, 1, 5)
 
-    point.x = e.clientX - zoomX * zoomScale
-    point.y = e.clientY - zoomY * zoomScale
+    mapCoords.x = e.clientX - zoomX * zoomScale
+    mapCoords.y = e.clientY - zoomY * zoomScale
 
     setTransform()
 })
