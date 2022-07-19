@@ -1,31 +1,386 @@
 body {
     margin: 0;
     overflow: hidden;
+    user-select: none;
+    font-family: genshin-font;
+    color: rgb(210, 187, 142);
+}
+
+@font-face {
+    font-family: genshin-font;
+    src: url(assets/ja-jp.ttf);
+}
+
+#canvas {
+    position: fixed;
+    cursor: grab;
+    transform-origin: 0px 0px;
+
+    z-index: -1;
+    /* background-color: rgba(216, 238, 94, 0.4); */
+    /* border: 5px solid purple; */
 }
 
 .teyvat_map {
-    position: absolute;
+    position: fixed;
     transform-origin: 0px 0px;
     transform: scale(1) translate(0px, 0px);
     object-fit: contain;
-    cursor: pointer;
     z-index: -1;
 }
 
 .landmark {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%;
-    border: 5px white solid;
+    width: 40px;
+    height: 40px;
+    background-image: url(./assets/landmark.webp);
+    background-size: cover;
 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     font-weight: 800;
+    z-index: 2;
     color: white;
 
-    transform: translate(-30px, -30px);
+    transform: translate(-20px, -20px);
+}
+
+.beacon { filter: hue-rotate(180deg);}
+.statues { background-image: url(./assets/statues.webp); }
+.domains { background-image: url(./assets/domains.webp); }
+.dungeons { background-image: url(./assets/dungeons.webp); }
+.resources { 
+    /* background-image: url(./assets/Background_Item_1_Star.webp); */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-size: 35px;
+    border: 2px solid whitesmoke;
+}
+
+#sideMenu {
+    position: fixed;
+    background-color: rgba(59, 67, 84, .8);
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    /* padding: 15px; */
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+section .tab {
+    /* width: 50px; */
+    border-right: 2px solid yellow;
+}
+
+section .tablink {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+
+section .tablink:hover, #tab .active { background-color: rgba(55, 63, 77, 1); }
+
+#general { background-image: url(./assets/geography.webp);}
+
+#expand {
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    background: url(./assets/arrow.png);
+    background-size: cover;
+    background-color: rgba(59, 67, 84, .8);
+    border-radius: 0 30% 30% 0;
+}
+
+#expand:hover {
+    background-color: rgba(59, 67, 84, 1);
+}
+
+section .section-content {
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+}
+
+section h1 {
+    font-size: 42px;
+    /* font-family: sans-serif; */
+    text-align: center;
+}
+
+section button {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    background-color: rgba(59, 67, 84, .8);
+    border: 2px solid rgb(210, 187, 142);
+    border-radius: 10px;
+    font-size: large;
+    color: rgb(210, 187, 142);
+}
+
+section button:hover {
+    background-color: rgba(55, 63, 77, 1);
+    cursor: pointer;
+}
+
+#chart {
+    position: fixed;
+    bottom: 0;
+    margin: 20px 0;
+    align-items: center;
+}
+
+#chart canvas {
+    width: 100%;
+    /* height: 250px; */
+    background-color: whitesmoke;
+}
+
+#chart button {
+    margin: 20px 0;
+}
+
+#chart input {
+    width: 50px;
+}
+
+#create-context-menu {
+    position: fixed;
+    padding: 15px;
+    z-index: 5;
+    width: 150px;
+    background-color: antiquewhite;
+    color: rgb(59, 67, 84);
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    transform: translate(25px, 15px);
+}
+
+#create-context-menu.visible {
+    display: block;
+}
+
+#create-context-menu:before, #create-context-menu::after {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 5px;
+    height: 20px;
+    content: ' ';
+    background-color: white;
+}
+
+#create-context-menu:before { transform: rotate(45deg) translate(-30px, 10px); }
+#create-context-menu:after { transform: rotate(-45deg) translate(-10px, -30px); }
+
+
+#create-context-menu .item { color: rgba(59, 67, 84, .5); width: 100%; }
+
+#create-context-menu .active { color: rgba(59, 67, 84, 1); cursor: pointer; }
+#create-context-menu .active:hover { background-color: grey; }
+
+#edit-context-menu {
+    position: fixed;
+    padding: 5px;
+    width: 200px;
+    background-color: antiquewhite;
+    color: rgb(59, 67, 84);
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    transform: translate(25px, 15px);
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s;
+    text-transform: capitalize;
+}
+
+#edit-context-menu.visible {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+#markers .selected {
+    filter: drop-shadow(2px 2px 1px white)
+        drop-shadow(-2px 2px 1px white)
+        drop-shadow(2px -2px 1px white)
+        drop-shadow(-2px -2px 1px white);
+    transform: translate(-20px, -20px) scale(1.2);
+}
+
+#form {
+    width: 200px;
+    height: 500px;
+    border-right: 2px solid black;
+}
+
+.bg-items {
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: 100px;
+    background-image: url(./assets/Background_Item_1_Star.webp);
+}
+
+#resourceIMG {
+    width: 100%;
+    height: 100px;
+    background-size: 100px;
+    border-radius: 50%;
+}
+
+.bg-items:hover {
+    cursor: pointer;
+}
+
+.bg-items:hover #resourceIMG {
+    background-position: -5px -5px;
+    background-size: 110px;
+    filter: drop-shadow(2px 2px 1px white)
+        drop-shadow(-2px 2px 1px white)
+        drop-shadow(2px -2px 1px white)
+        drop-shadow(-2px -2px 1px white);
+}
+
+#edit-context-menu input[type=text] {
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 80%;
+    margin: 10px;
+}
+
+#edit-context-menu input[type=number] {
+    width: 50px;
+    height: 20px;
+    font-size: 15px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+#edit-context-menu .minus, #edit-context-menu .plus {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding: 4px 8px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#edit-context-menu input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#edit-context-menu input:disabled {
+    background: #ccc;
+}
+
+#save {
+    background-color: green;
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: inherit;
+    font-family: inherit;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#other_section {
+    width: 600px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#other_section ul {
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+#other_section li {
+    width: 50px;
+    height: 50px;
+    background-image: url(./assets/icons/apple.webp), url(./assets/Background_Item_1_Star.webp);
+    background-size: 50px;
+    margin: 10px;
+    border: 2px solid black;
+    transition: all.2s;
+}
+
+#other_section li:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#sideMenuListResources {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+#sideMenuListResources li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-size: 50px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#sideMenuListResources .selected {
+    border: 2px solid white;
+}
+
+#debug {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: rgba(10, 10, 10, 0.5);
+    width: 200px;
+    height: 200px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 10;
+    color: white;
+    transition: all .2s;
 }

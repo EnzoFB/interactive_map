@@ -1,0 +1,1297 @@
+{
+  "waypoints": [
+    {
+      "name": "statues",
+      "coords": [
+        {
+          "x": 2200,
+          "y": 766
+        },
+        {
+          "x": 1824,
+          "y": 1121
+        },
+        {
+          "x": 2168,
+          "y": 1090
+        },
+        {
+          "x": 1447,
+          "y": 730
+        },
+        {
+          "x": 2048,
+          "y": 1461
+        },
+        {
+          "x": 1407,
+          "y": 1412
+        },
+        {
+          "x": 800,
+          "y": 1666
+        },
+        {
+          "x": 1665,
+          "y": 1736
+        },
+        {
+          "x": 1411,
+          "y": 2060
+        },
+        {
+          "x": 1043,
+          "y": 2221
+        },
+        {
+          "x": 536,
+          "y": 2387
+        },
+        {
+          "x": 3488,
+          "y": 3263
+        },
+        {
+          "x": 3155,
+          "y": 3815
+        },
+        {
+          "x": 2645,
+          "y": 3901
+        },
+        {
+          "x": 1825,
+          "y": 3967
+        },
+        {
+          "x": 3552,
+          "y": 4266
+        },
+        {
+          "x": 3171,
+          "y": 5113
+        }
+      ]
+    },
+    {
+      "name": "dungeons",
+      "coords": [
+        {
+          "x": 2314,
+          "y": 803
+        },
+        {
+          "x": 1652,
+          "y": 923
+        },
+        {
+          "x": 1981,
+          "y": 1207
+        },
+        {
+          "x": 1868,
+          "y": 1197
+        }
+      ]
+    },
+    {
+      "name": "domains",
+      "coords": [
+        {
+          "x": 1470,
+          "y": 721
+        },
+        {
+          "x": 2125,
+          "y": 978
+        },
+        {
+          "x": 2359,
+          "y": 966
+        },
+        {
+          "x": 2254,
+          "y": 1217
+        },
+        {
+          "x": 2472,
+          "y": 1385
+        }
+      ]
+    },
+    {
+      "name": "resources",
+      "types": [
+        {
+          "name": "amakumo_fruit",
+          "info": [
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 3642,
+                "y": 4310
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3634,
+                "y": 4301
+              }
+            },
+            {
+              "quantity": 6,
+              "coords": {
+                "x": 3643,
+                "y": 4181
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3748,
+                "y": 4196
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3758,
+                "y": 4194
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3768,
+                "y": 4197
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3683,
+                "y": 4287
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3691,
+                "y": 4282
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3698,
+                "y": 4270
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3654,
+                "y": 4315
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3675,
+                "y": 4317
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3640,
+                "y": 4334
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 3613,
+                "y": 4350
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 3482,
+                "y": 4216
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 3458,
+                "y": 4247
+              }
+            }
+          ]
+        },
+        {
+          "name": "amethyst_lump",
+          "info": []
+        },
+        {
+          "name": "apple",
+          "info": []
+        },
+        {
+          "name": "bamboo_shoot",
+          "info": []
+        },
+        {
+          "name": "berry",
+          "info": []
+        },
+        {
+          "name": "bird_egg",
+          "info": []
+        },
+        {
+          "name": "butterfly_wings",
+          "info": []
+        },
+        {
+          "name": "cabbage",
+          "info": []
+        },
+        {
+          "name": "calla_lily",
+          "info": []
+        },
+        {
+          "name": "carrot",
+          "info": []
+        },
+        {
+          "name": "cecilia",
+          "info": []
+        },
+        {
+          "name": "cor_lapis",
+          "info": []
+        },
+        {
+          "name": "crab",
+          "info": []
+        },
+        {
+          "name": "crystal_chunk",
+          "info": []
+        },
+        {
+          "name": "crystal_core",
+          "info": []
+        },
+        {
+          "name": "crystal_marrow",
+          "info": []
+        },
+        {
+          "name": "dandelion_seed",
+          "info": []
+        },
+        {
+          "name": "dendrobium",
+          "info": []
+        },
+        {
+          "name": "electro_crystal",
+          "info": []
+        },
+        {
+          "name": "fish",
+          "info": []
+        },
+        {
+          "name": "flaming_flower_stamen",
+          "info": []
+        },
+        {
+          "name": "fluorescent_fungus",
+          "info": []
+        },
+        {
+          "name": "fowl",
+          "info": []
+        },
+        {
+          "name": "frog",
+          "info": []
+        },
+        {
+          "name": "glaze_lily",
+          "info": []
+        },
+        {
+          "name": "horsetail",
+          "info": []
+        },
+        {
+          "name": "iron_chunk",
+          "info": []
+        },
+        {
+          "name": "jueyun_chili",
+          "info": []
+        },
+        {
+          "name": "lamp_grass",
+          "info": []
+        },
+        {
+          "name": "lavender_melon",
+          "info": []
+        },
+        {
+          "name": "lizard_tail",
+          "info": []
+        },
+        {
+          "name": "loach_pearl",
+          "info": []
+        },
+        {
+          "name": "lotus_head",
+          "info": []
+        },
+        {
+          "name": "luminescent_spine",
+          "info": []
+        },
+        {
+          "name": "magical_crystal_chunk",
+          "info": []
+        },
+        {
+          "name": "matsutake",
+          "info": [
+            {
+              "quantity": 10,
+              "coords": {
+                "x": 1367,
+                "y": 1600
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1392,
+                "y": 777
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1701,
+                "y": 686
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1709,
+                "y": 667
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1711,
+                "y": 749
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1721,
+                "y": 751
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1749,
+                "y": 862
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1517,
+                "y": 922
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1509,
+                "y": 994
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1598,
+                "y": 1068
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1712,
+                "y": 1073
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1786,
+                "y": 1083
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1761,
+                "y": 1034
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1795,
+                "y": 1012
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1877,
+                "y": 1017
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1918,
+                "y": 1042
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2169,
+                "y": 983
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2190,
+                "y": 952
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2148,
+                "y": 918
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2156,
+                "y": 867
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2201,
+                "y": 887
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2222,
+                "y": 819
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2210,
+                "y": 824
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2148,
+                "y": 695
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2155,
+                "y": 668
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2068,
+                "y": 667
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2145,
+                "y": 623
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2167,
+                "y": 560
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2267,
+                "y": 591
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2308,
+                "y": 589
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2325,
+                "y": 584
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2370,
+                "y": 655
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2432,
+                "y": 602
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2438,
+                "y": 577
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2326,
+                "y": 777
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2379,
+                "y": 823
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2398,
+                "y": 830
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2352,
+                "y": 886
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2341,
+                "y": 955
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2355,
+                "y": 1013
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2383,
+                "y": 1015
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2362,
+                "y": 986
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2333,
+                "y": 1045
+              }
+            }
+          ]
+        },
+        {
+          "name": "mint",
+          "info": []
+        },
+        {
+          "name": "mist_flower_corolla",
+          "info": []
+        },
+        {
+          "name": "mushroom",
+          "info": []
+        },
+        {
+          "name": "naku_weed",
+          "info": []
+        },
+        {
+          "name": "noctilucous_jade",
+          "info": []
+        },
+        {
+          "name": "onikabuto",
+          "info": []
+        },
+        {
+          "name": "onion",
+          "info": []
+        },
+        {
+          "name": "philanemo_mushroom",
+          "info": [
+            {
+              "quantity": 6,
+              "coords": {
+                "x": 1921,
+                "y": 945
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1946,
+                "y": 935
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1961,
+                "y": 939
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1974,
+                "y": 951
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1982,
+                "y": 948
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1989,
+                "y": 947
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2005,
+                "y": 905
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2001,
+                "y": 897
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2003,
+                "y": 890
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1970,
+                "y": 877
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1952,
+                "y": 875
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1949,
+                "y": 899
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1730,
+                "y": 1200
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1767,
+                "y": 1199
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1788,
+                "y": 1186
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1966,
+                "y": 1107
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1971,
+                "y": 1089
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1969,
+                "y": 1075
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1991,
+                "y": 1078
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1997,
+                "y": 1098
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2005,
+                "y": 1092
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2009,
+                "y": 1079
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2014,
+                "y": 1072
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2008,
+                "y": 1063
+              }
+            }
+          ]
+        },
+        {
+          "name": "pinecone",
+          "info": []
+        },
+        {
+          "name": "potato",
+          "info": []
+        },
+        {
+          "name": "qingxin",
+          "info": []
+        },
+        {
+          "name": "radish",
+          "info": []
+        },
+        {
+          "name": "sakura_bloom",
+          "info": []
+        },
+        {
+          "name": "sango_pearl",
+          "info": []
+        },
+        {
+          "name": "sea_ganoderma",
+          "info": []
+        },
+        {
+          "name": "seagrass",
+          "info": []
+        },
+        {
+          "name": "silk_flower",
+          "info": []
+        },
+        {
+          "name": "snapdragon",
+          "info": []
+        },
+        {
+          "name": "starconch",
+          "info": []
+        },
+        {
+          "name": "starsilver",
+          "info": []
+        },
+        {
+          "name": "strange_tooth",
+          "info": [
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1883,
+                "y": 1292
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1800,
+                "y": 1377
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 1934,
+                "y": 1384
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2176,
+                "y": 1648
+              }
+            }
+          ]
+        },
+        {
+          "name": "sweet_flower",
+          "info": []
+        },
+        {
+          "name": "tomato",
+          "info": []
+        },
+        {
+          "name": "unagi_meat",
+          "info": []
+        },
+        {
+          "name": "valberry",
+          "info": [
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2095,
+                "y": 744
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2073,
+                "y": 726
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2067,
+                "y": 657
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2107,
+                "y": 657
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2123,
+                "y": 702
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2163,
+                "y": 664
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2158,
+                "y": 576
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2235,
+                "y": 560
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2211,
+                "y": 624
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2190,
+                "y": 712
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2222,
+                "y": 704
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2246,
+                "y": 670
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2259,
+                "y": 710
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2281,
+                "y": 712
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2263,
+                "y": 625
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2348,
+                "y": 580
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2395,
+                "y": 580
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2420,
+                "y": 579
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2460,
+                "y": 622
+              }
+            }
+          ]
+        },
+        {
+          "name": "wheat",
+          "info": []
+        },
+        {
+          "name": "white_iron_chunk",
+          "info": []
+        },
+        {
+          "name": "windwheel_aster",
+          "info": [
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1811,
+                "y": 1112
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1820,
+                "y": 1126
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1832,
+                "y": 1110
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2193,
+                "y": 750
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2177,
+                "y": 1107
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2233,
+                "y": 1172
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 2257,
+                "y": 1150
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2247,
+                "y": 1098
+              }
+            },
+            {
+              "quantity": 1,
+              "coords": {
+                "x": 2203,
+                "y": 1055
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 2161,
+                "y": 1080
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 2151,
+                "y": 1060
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 2208,
+                "y": 1076
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1456,
+                "y": 576
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1439,
+                "y": 599
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1491,
+                "y": 621
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1546,
+                "y": 644
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1573,
+                "y": 723
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1493,
+                "y": 772
+              }
+            },
+            {
+              "quantity": 2,
+              "coords": {
+                "x": 1404,
+                "y": 780
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1395,
+                "y": 803
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1367,
+                "y": 774
+              }
+            },
+            {
+              "quantity": 3,
+              "coords": {
+                "x": 1395,
+                "y": 739
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1326,
+                "y": 732
+              }
+            },
+            {
+              "quantity": 4,
+              "coords": {
+                "x": 1351,
+                "y": 656
+              }
+            }
+          ]
+        },
+        {
+          "name": "wolfhook",
+          "info": []
+        }
+      ]
+    }
+  ]
+}

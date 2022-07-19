@@ -6,12 +6,152 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Map interactive</title>
         <link rel="stylesheet" href="./styles.css">
-        <script type="text/javascript">
-            window.scrollTo(0, 0)
-        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
 </head>
 <body>
-    <img src="./assets/Teyvat_Map.png" alt="map" class="teyvat_map">
+    <div id="map">
+        <img id="imgMap" src="./assets/Teyvat_Map.png" alt="map" class="teyvat_map">
+        <canvas id="canvas"></canvas>
+        <div id="markers"></div>
+    </div>
+    <section id="sideMenu">
+        <div id="expand" onclick="hideSideMenu()"></div>
+        <div id="tab">
+            <div id="general" class="tablink active"></div>
+            <div class="tablink">test</div>
+            <div class="tablink">test</div>
+        </div>
+        <div class="section-content">
+            <div style="font-size: 25px;">Solution:</div>
+            <hr style="width: 100%;">
+            <button id="short" onclick="shortTrace()">Calculer une trajectoire optimale</button>
+            <div>Beaucoup de points maximums</div>
+            <button id="brut" onclick="brutTrace()">Calculer la trajectoire la plus courte</button>
+            <div>9 points maximums</div>
+            <button id="loadjson" onclick="readData()">Charger le JSON</button>
+            <hr style="width: 100%;">
+            <div>Resources</div>
+            <ul id="sideMenuListResources"></ul>
+            <!-- <div id="chart">
+                <div style="text-align: center;">Performance</div>
+                <br>
+                <canvas id="histogram" height="200"></canvas>
+                <br>
+                <button id="graph" onclick="createChart()">Créer un graph</button>
+                <div style="text-align: center;">
+                    Min: <input type="number" id="min" value="0">
+                    Max: <input type="number" id="max" value="100">
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <div id="create-context-menu">
+        <div id="create-coords">X: 0 | Y: 0</div>
+        <hr style="width: 90%; border-color:black;">
+        <div class="item active" onclick="createBeacon()" id="createLandmark">Créer un point</div>
+    </div>
+    <div id="edit-context-menu">
+        <div>
+            <form id="form" onsubmit="return false">
+                <div id="coords_or_name">X: 0 | Y: 0</div>
+                <hr style="width: 90%; border-color:black;">
+    
+                <label for="type">Select type</label>
+                <input type="hidden" id="type">
+                <div class="bg-items" id="IMGtype">
+                    <div id="resourceIMG"></div>
+                </div>
+                <br>
+                <div id="divQuantity">
+                    <label for="quantity">Quantity</label>
+                    <div name="quantity" class="quantity">
+                        <label>Q</label>
+                        <input type="number" id="quantity" value="1"></input>
+                        <span class="minus" id="minusQ">-</span>
+                        <span class="plus" id="plusQ">+</span>
+                    </div>
+                </div>
+                <br>
+                <label>Coords</label>
+                <div>
+                    <div>
+                        <label for="x">X:</label>
+                        <input type="number" name="x" id="coordX">
+                        <span class="minus" id="minusX">-</span>
+                        <span class="plus" id="plusX">+</span>
+                    </div>
+    
+                    <div>
+                        <label for="y">Y:</label>
+                        <input type="number" name="y" id="coordY">
+                        <span class="minus" id="minusY">-</span>
+                        <span class="plus" id="plusY">+</span>
+                    </div>
+    
+                </div>
+                <span>
+                    <button type="button" id="save">Save</button>
+                </span>
+            </form>
+        </div>
+        <section>
+            <div id="other_section">
+                <label for="">Places</label>
+                <ul id="places"></ul>
+                <hr>
+                <label for="">Resources</label>
+                <ul id="resources"></ul>
+            </div>
+        </section>
+        <!-- <div id="edit-coords">X: 0 | Y: 0</div>
+        <hr style="width: 90%; border-color:black;">
+        <div class="bg-items">
+            <div id="resourceIMG"></div>
+        </div>
+        <br>
+        <label for="types">TYPE</label>
+        <select name="types" id="types">
+            <option value="">-- Choose a type --</option>
+        </select>
+        <br>
+        <label for="quantities">QUANTITE</label>
+        <input type="number" name="quantities" value="0"></input>
+        <br>
+        <div class="item">
+            <span>
+                <label for="x">x:</label>
+                <input type="number" name="x" id="coordX">
+                <label for="y">y:</label>
+                <input type="number" name="y" id="coordY">
+            </span>
+        </div>
+        <br>
+        <div class="item" id="save">Sauvegarder</div>
+        <br>
+        <div class="item" id="delete">Supprimer</div> -->
+    </div>
+    <div id="debug">
+        <div>Debug</div>
+        <hr>
+        <div>Mouse:</div>
+        <div id="rt-mouse">X: 0, Y: 0</div>
+        <br>
+        <div>Map:</div>
+        <div id="rt-map">X: 0, Y: 0</div>
+        <br>
+        <div id="rt-zoom">ZoomScale: 1</div>
+    </div>
 </body>
-<script src="./main.js"></script>
+<script type="text/javascript" src="./scripts/main.js"></script>
+<script type="text/javascript" src="./scripts/map/map.js"></script>
+<script type="text/javascript" src="./scripts/map/canvas.js"></script>
+
+<script type="text/javascript" src="./scripts/math/math.js"></script>
+
+<script type="text/javascript" src="./scripts/draw.js"></script>
+<script type="text/javascript" src="./scripts/data.js"></script>
+<script type="text/javascript" src="./scripts/context-menu.js"></script>
+<script type="text/javascript" src="./scripts/side-menu.js"></script>
+<script type="text/javascript" src="./scripts/math/chart.js"></script>
+<script type="text/javascript" src="./scripts/debug.js"></script>
 </html>

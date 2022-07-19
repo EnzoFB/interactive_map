@@ -1,0 +1,416 @@
+{
+    "waypoints": [
+        {
+            "name": "statues",
+            "coords": [
+                {
+                    "x": 2200,
+                    "y": 766
+                },
+                {
+                    "x": 1824,
+                    "y": 1121
+                },
+                {
+                    "x": 2168,
+                    "y": 1090
+                },
+                {
+                    "x": 1447,
+                    "y": 730
+                },
+                {
+                    "x": 2048,
+                    "y": 1461
+                },
+                {
+                    "x": 1407,
+                    "y": 1412
+                },
+                {
+                    "x": 800,
+                    "y": 1666
+                },
+                {
+                    "x": 1665,
+                    "y": 1736
+                },
+                {
+                    "x": 1411,
+                    "y": 2060
+                },
+                {
+                    "x": 1043,
+                    "y": 2221
+                },
+                {
+                    "x": 536,
+                    "y": 2387
+                },
+                {
+                    "x": 3488,
+                    "y": 3263
+                },
+                {
+                    "x": 3155,
+                    "y": 3815
+                },
+                {
+                    "x": 2645,
+                    "y": 3901
+                },
+                {
+                    "x": 1825,
+                    "y": 3967
+                },
+                {
+                    "x": 3552,
+                    "y": 4266
+                },
+                {
+                    "x": 3171,
+                    "y": 5113
+                }
+            ]
+        },
+        {
+            "name": "dungeons",
+            "coords": [
+                {
+                    "x": 2314,
+                    "y": 803
+                },
+                {
+                    "x": 1652,
+                    "y": 923
+                },
+                {
+                    "x": 1981,
+                    "y": 1207
+                },
+                {
+                    "x": 1868,
+                    "y": 1197
+                }
+            ]
+        },
+        {
+            "name": "domains",
+            "coords": [
+                {
+                    "x": 1470,
+                    "y": 721
+                },
+                {
+                    "x": 2125,
+                    "y": 978
+                },
+                {
+                    "x": 2359,
+                    "y": 966
+                },
+                {
+                    "x": 2254,
+                    "y": 1217
+                },
+                {
+                    "x": 2472,
+                    "y": 1385
+                }
+            ]
+        },
+        {
+            "name": "resources",
+            "types": [
+                {
+                    "name": "amakumo_fruit",
+                    "info": [
+                        {
+                            "quantity": "4",
+                            "coords": {
+                                "x": "3642",
+                                "y": "4310"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3634",
+                                "y": "4301"
+                            }
+                        },
+                        {
+                            "quantity": "6",
+                            "coords": {
+                                "x": "3643",
+                                "y": "4181"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3748",
+                                "y": "4196"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3758",
+                                "y": "4194"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3768",
+                                "y": "4197"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3683",
+                                "y": "4287"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3691",
+                                "y": "4282"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3698",
+                                "y": "4270"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3654",
+                                "y": "4315"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3675",
+                                "y": "4317"
+                            }
+                        },
+                        {
+                            "quantity": "2",
+                            "coords": {
+                                "x": "3640",
+                                "y": "4334"
+                            }
+                        },
+                        {
+                            "quantity": "4",
+                            "coords": {
+                                "x": "3613",
+                                "y": "4350"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "amethyst_lump",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "apple",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "bamboo_shoot",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "berry",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "bird_egg",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "butterfly_wings",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "cabbage",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "calla_lily",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "carrot",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "cecilia",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "cor_lapis",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "crab",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "crystal_chunk",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "crystal_core",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "crystal_marrow",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "dandelion_seed",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "dendrobium",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "electro_crystal",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "fish",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "flaming_flower_stamen",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "fluorescent_fungus",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "fowl",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "frog",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "glaze_lily",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "horsetail",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "iron_chunk",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "jueyun_chili",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "lamp_grass",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "lavender_melon",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "lizard_tail",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "loach_pearl",
+                    "info": [
+
+                    ]
+                },
+                {
+                    "name": "lotus_head",
+                    "info": [
+
+                    ]
+                }
+            ]
+        }
+    ]
+}
